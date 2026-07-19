@@ -1,6 +1,7 @@
 # 过滤补丁（Clash Verge Rev 专用，扩展配置 Merge 语法）
-# 用法：订阅卡片右键 → 编辑扩展配置 → 粘贴本文件全部内容 → 保存 → 重新启用订阅
+# 用法：订阅卡片右键 → 扩展覆写配置 → 粘贴本文件全部内容 → 保存 → 重新启用订阅
 # 注意：必须用 prepend-* 语法，直接写 rules: 会整体覆盖机场订阅的分流规则
+# 注意：不要加 dns: 覆盖段——Verge Rev 用 dns_config.yaml 管理 DNS，整段覆盖会导致合并配置无效
 
 prepend-rules:
   - RULE-SET,custom,REJECT
@@ -20,9 +21,3 @@ prepend-rule-providers:
     url: "https://cdn.jsdelivr.net/gh/aggjjfd/dns-filter@main/clash-custom-blocklist.yaml"
     path: ./ruleset/custom-blocklist.yaml
     interval: 86400
-
-# 覆盖原配置的 DNS：挂梯时经代理走 CleanBrowsing 家庭过滤 DoH
-dns:
-  enable: true
-  nameserver:
-    - "https://doh.cleanbrowsing.org/doh/family-filter/"
