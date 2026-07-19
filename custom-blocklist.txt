@@ -1,0 +1,2 @@
+# 自定义屏蔽名单：规则集漏掉的站点写在这里，一行一个域名（# 开头为注释）
+# 修改后重跑 uv run dns/tools/make_hosts.py 即并入 dns/adult-hosts.txt

@@ -1,0 +1,3 @@
+# 自定义屏蔽规则集（mihomo rule-provider，behavior: domain）
+# 由 dns/tools/make_hosts.py 根据 dns/custom-blocklist.txt 生成，勿手改
+payload:
