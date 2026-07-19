@@ -1,6 +1,5 @@
 # 过滤补丁（Clash 规则层）
 # 用法：Windows/Android 粘贴进客户端覆写；iPad Stash 用 install-override 远程安装本文件
-# 注意：把 <你的用户名>/<仓库> 替换为实际 GitHub 地址后，custom 规则集才能更新
 
 rules:
   - RULE-SET,custom,REJECT
@@ -17,7 +16,7 @@ rule-providers:
   custom:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/<你的用户名>/<仓库>/main/dns/clash-custom-blocklist.yaml"
+    url: "https://raw.githubusercontent.com/aggjjfd/dns-filter/main/clash-custom-blocklist.yaml"
     path: ./ruleset/custom-blocklist.yaml
     interval: 86400
 
