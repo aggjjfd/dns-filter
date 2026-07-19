@@ -1,0 +1,28 @@
+# 过滤补丁（Clash Verge Rev 专用，扩展配置 Merge 语法）
+# 用法：订阅卡片右键 → 编辑扩展配置 → 粘贴本文件全部内容 → 保存 → 重新启用订阅
+# 注意：必须用 prepend-* 语法，直接写 rules: 会整体覆盖机场订阅的分流规则
+
+prepend-rules:
+  - RULE-SET,custom,REJECT
+  - RULE-SET,porn,REJECT
+
+prepend-rule-providers:
+  porn:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-porn.mrs"
+    path: ./ruleset/category-porn.mrs
+    interval: 86400
+  custom:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/aggjjfd/dns-filter/main/clash-custom-blocklist.yaml"
+    path: ./ruleset/custom-blocklist.yaml
+    interval: 86400
+
+# 覆盖原配置的 DNS：挂梯时经代理走 CleanBrowsing 家庭过滤 DoH
+dns:
+  enable: true
+  nameserver:
+    - "https://doh.cleanbrowsing.org/doh/family-filter/"
