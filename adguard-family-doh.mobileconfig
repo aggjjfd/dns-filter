@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerURL</key>
+				<string>https://family.adguard-dns.com/dns-query</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>94.140.14.15</string>
+					<string>94.140.15.16</string>
+				</array>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>AdGuard Family DoH（成人内容过滤）</string>
+			<key>PayloadDisplayName</key>
+			<string>DNS 设置（AdGuard 家庭过滤）</string>
+			<key>PayloadIdentifier</key>
+			<string>com.aggjjfd.dnsfilter.dns</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>4A7C2E1F-9B3D-4F5A-8C6E-1D2B3A4C5E6F</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>系统级成人内容过滤 DNS（AdGuard Family DoH），仅在未挂梯时生效</string>
+	<key>PayloadDisplayName</key>
+	<string>成人内容过滤 DNS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.aggjjfd.dnsfilter.profile</string>
+	<key>PayloadOrganization</key>
+	<string>dns-filter</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>8F2D1C3B-5A4E-4B6C-9D7F-2E1A3B5C7D9E</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
