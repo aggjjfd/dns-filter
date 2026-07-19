@@ -20,7 +20,7 @@
 首次配置约 30 分钟：
 
 1. 💻 **Windows**：Clash Verge 订阅右键 → 扩展覆写配置 → 粘贴 [`filter-verge.yaml`](filter-verge.yaml) 内容，保存后重新启用订阅（⚠️ 必须用 prepend 语法，勿用 `filter.stoverride`，会覆盖机场分流规则）
-2. 🤖 **Android**：装 FlClash → 订阅覆写 → 粘贴 [`filter.stoverride`](filter.stoverride)；AdAway（root 模式）远程源填：
+2. 🤖 **Android**：FlClash → 工具 → 进阶配置 → 脚本 → 新建 → 粘贴 [`flclash-override.js`](flclash-override.js) 内容（比逐条覆写高效百倍）→ 保存并启用；AdAway（root 模式）远程源填：
    `https://cdn.jsdelivr.net/gh/aggjjfd/dns-filter@main/adult-hosts.txt`
 3. 📱 **iPad（Shadowrocket，管挂梯）**：底栏「配置」→「模块」➕ → 粘贴下方模块链接 → 下载；回到配置点「使用配置」；再到 设置 → 自动更新 打开模块更新（间隔 1 天）：
    `https://cdn.jsdelivr.net/gh/aggjjfd/dns-filter@main/adult-block.module`
@@ -74,16 +74,18 @@ git push                     # 三端 24h 内自动生效
 ## 📁 仓库结构
 
 ```
-├── filter.stoverride           # 🧩 过滤补丁（Android FlClash 覆写用）
+├── filter.stoverride           # 🧩 过滤补丁（仅供参考，不建议直接用）
 ├── filter-verge.yaml           # 🧩 过滤补丁（Clash Verge Rev 扩展覆写配置用，prepend 语法）
+├── flclash-override.js         # 🤖 FlClash 覆写脚本（Android，JS main(config) 模式）
 ├── adult-block.module          # 📱 Shadowrocket 模块（iPad 挂梯层）
-├── adult-shadowrocket.list     # 📋 Shadowrocket 规则集（自动生成，6515 条）
+├── adult-shadowrocket.list     # 📋 Shadowrocket 规则集（自动生成）
 ├── adguard-family-doh.mobileconfig # 📱 iOS DNS 描述文件（iPad 直连层）
 ├── adult-hosts.txt             # 🌐 hosts 黑名单（自动生成，约 1.29 万条）
 ├── clash-custom-blocklist.yaml # 📋 自定义 Clash 规则集（自动生成）
 ├── custom-blocklist.txt        # ✏️ 自定义名单源文件（手改这里）
-└── tools/make_hosts.py         # 🔧 名单生成脚本
-    tools/install_hosts_windows.ps1 # 🧱 Windows hosts 注入脚本（管理员运行）
+└── tools/
+    ├── make_hosts.py           # 🔧 名单生成脚本
+    └── install_hosts_windows.ps1 # 🧱 Windows hosts 注入脚本（管理员运行）
 ```
 
 ## 🔧 维护

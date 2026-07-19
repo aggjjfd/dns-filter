@@ -1,5 +1,7 @@
-# 过滤补丁（Clash 规则层，Android FlClash 覆写专用）
-# ⚠️ Windows Clash Verge Rev 请改用 filter-verge.yaml（prepend 语法），本文件的 rules: 会覆盖机场分流规则
+# 过滤补丁（Clash 规则层）
+# ❗ Android FlClash 请改用 flclash-override.js（脚本模式，一条搞定）
+# ❗ Windows Verge Rev 请改用 filter-verge.yaml（prepend 语法）
+# 本文件仅作参考，直接粘贴 rules: 会整体覆盖客户端已有分流规则
 
 rules:
   - RULE-SET,custom,REJECT
