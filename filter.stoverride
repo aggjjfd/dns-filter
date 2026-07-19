@@ -1,5 +1,5 @@
-# 过滤补丁（Clash 规则层）
-# 用法：Windows/Android 粘贴进客户端覆写；iPad Stash 用 install-override 远程安装本文件
+# 过滤补丁（Clash 规则层，Android FlClash 覆写专用）
+# ⚠️ Windows Clash Verge Rev 请改用 filter-verge.yaml（prepend 语法），本文件的 rules: 会覆盖机场分流规则
 
 rules:
   - RULE-SET,custom,REJECT
