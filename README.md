@@ -21,11 +21,11 @@
 
 1. 💻 **Windows**：Clash Verge 订阅右键 → 扩展覆写配置 → 粘贴 [`filter-verge.yaml`](filter-verge.yaml) 内容，保存后重新启用订阅（⚠️ 必须用 prepend 语法，勿用 `filter.stoverride`，会覆盖机场分流规则）
 2. 🤖 **Android**：装 FlClash → 订阅覆写 → 粘贴 [`filter.stoverride`](filter.stoverride)；AdAway（root 模式）远程源填：
-   `https://raw.githubusercontent.com/aggjjfd/dns-filter/main/adult-hosts.txt`
+   `https://cdn.jsdelivr.net/gh/aggjjfd/dns-filter@main/adult-hosts.txt`
 3. 📱 **iPad（Shadowrocket，管挂梯）**：底栏「配置」→「模块」➕ → 粘贴下方模块链接 → 下载；回到配置点「使用配置」；再到 设置 → 自动更新 打开模块更新（间隔 1 天）：
-   `https://raw.githubusercontent.com/aggjjfd/dns-filter/main/adult-block.module`
+   `https://cdn.jsdelivr.net/gh/aggjjfd/dns-filter@main/adult-block.module`
 4. 📱 **iPad（DNS 描述文件，管直连）**：iPad 上 Safari 打开下方链接下载描述文件 → 设置 → 已下载描述文件 → 安装（Safari 若直接显示文本，改用微信/邮件把文件发到 iPad 打开）：
-   `https://raw.githubusercontent.com/aggjjfd/dns-filter/main/adguard-family-doh.mobileconfig`
+   `https://cdn.jsdelivr.net/gh/aggjjfd/dns-filter@main/adguard-family-doh.mobileconfig`
 5. 🧱 **Windows 裸连兜底**：管理员 PowerShell 执行 `tools/install_hosts_windows.ps1`（幂等注入标记块，自动刷新 DNS 缓存）；或手动把 `adult-hosts.txt` 追加进 `C:\Windows\System32\drivers\etc\hosts`
 6. 🔑 GitHub 密码写纸上放公司（防自己冲动拆规则）
 

@@ -1,4 +1,4 @@
 #!name=成人内容拦截
 #!desc=category-porn 规则集 REJECT（pre-matching 最高优先级），内容每 24h 自动更新
 [Rule]
-RULE-SET,https://raw.githubusercontent.com/aggjjfd/dns-filter/main/adult-shadowrocket.list,REJECT,pre-matching
+RULE-SET,https://cdn.jsdelivr.net/gh/aggjjfd/dns-filter@main/adult-shadowrocket.list,REJECT,pre-matching

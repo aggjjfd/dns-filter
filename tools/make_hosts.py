@@ -16,7 +16,7 @@
 from pathlib import Path
 from urllib.request import urlopen
 
-SOURCE = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-porn.list"
+SOURCE = "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-porn.list"
 ROOT = Path(__file__).resolve().parent.parent
 CUSTOM = ROOT / "custom-blocklist.txt"
 HOSTS_OUT = ROOT / "adult-hosts.txt"
