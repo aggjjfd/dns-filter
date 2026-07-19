@@ -8,7 +8,7 @@ $domains = @(
   'jm222.xyz'
   'picacgp.com'
   'pronhub.com'
-  'nhentai.com'
+  'nhentai.net'
 )
 $proxy = 'http://127.0.0.1:7890'    # Verge Rev 默认 HTTP 代理端口
 $bypass = @('--noproxy', '*')        # 绕开环境变量代理

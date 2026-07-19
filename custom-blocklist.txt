@@ -4,6 +4,7 @@
 # --- 用户指定的成人站点 ---
 pronhub.com
 nyahentai.com
+nhentai.net
 nhentai.com
 ehentai.com
 exhentai.com
