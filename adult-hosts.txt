@@ -1,5 +1,5 @@
 # 成人内容 hosts 黑名单
-# 由 dns/tools/make_hosts.py 自动生成，源：v2fly category-porn（MetaCubeX 转换）+ dns/custom-blocklist.txt
+# 由 tools/make_hosts.py 自动生成，源：v2fly category-porn（MetaCubeX 转换）+ custom-blocklist.txt
 # 用法：Windows 并入 C:\Windows\System32\drivers\etc\hosts；Android 用 AdAway（root 模式）添加为远程源
 # 共 12904 条
 

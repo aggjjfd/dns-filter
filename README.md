@@ -22,8 +22,8 @@
 1. 💻 **Windows**：Clash Verge 订阅右键 → 编辑扩展配置 → 粘贴 [`filter.stoverride`](filter.stoverride) 内容，保存
 2. 🤖 **Android**：装 FlClash → 订阅覆写 → 粘贴同上；AdAway（root 模式）远程源填：
    `https://raw.githubusercontent.com/aggjjfd/dns-filter/main/adult-hosts.txt`
-3. 📱 **iPad**：浏览器打开下方链接一键安装远程覆写（Stash）：
-   `https://link.stash.ws/install-override/raw.githubusercontent.com/aggjjfd/dns-filter/main/filter.stoverride`
+3. 📱 **iPad（Shadowrocket）**：底栏「配置」→「模块」➕ → 粘贴下方模块链接 → 下载；回到配置点「使用配置」；再到 设置 → 自动更新 打开模块更新（间隔 1 天）：
+   `https://raw.githubusercontent.com/aggjjfd/dns-filter/main/adult-block.module`
 4. 🧱 **Windows 裸连兜底**：管理员记事本把 `adult-hosts.txt` 追加进 `C:\Windows\System32\drivers\etc\hosts`，然后 `ipconfig /flushdns`
 5. 🔑 GitHub 密码写纸上放公司（防自己冲动拆规则）
 
@@ -42,7 +42,7 @@
 
 - **Windows（Clash Verge Rev）**：订阅卡片右键 → 编辑扩展配置 → 粘贴补丁。扩展独立于订阅存储，机场订阅更新不丢；多台 PC 走客户端自带 WebDAV 同步
 - **Android（FlClash）**：⚠️ CMFA 无覆写机制，须用 FlClash。订阅 → 覆写 → 粘贴补丁，确保两条 `RULE-SET` 在 rules 最前
-- **iPad（Stash）**：远程覆写数组自动前插，REJECT 天然置顶；补丁文件本身更新后在 Stash 手动刷新一次
+- **iPad（Shadowrocket）**：机场订阅只提供节点，规则全来自配置文件；**模块规则优先于配置文件**，且模块里带 `pre-matching`（最高优先级），REJECT 钉死在顶部。模块与规则集支持 1–7 天间隔自动更新
 
 三端共性：**"注入点"只配一次，"内容"由规则集 URL 每 24 小时自动更新**。
 
@@ -72,7 +72,9 @@ git push                     # 三端 24h 内自动生效
 ## 📁 仓库结构
 
 ```
-├── filter.stoverride           # 🧩 过滤补丁（三端 Clash 覆写共用）
+├── filter.stoverride           # 🧩 过滤补丁（Windows/Android 的 Clash 覆写用）
+├── adult-block.module          # 📱 Shadowrocket 模块（iPad 一键安装）
+├── adult-shadowrocket.list     # 📋 Shadowrocket 规则集（自动生成，6515 条）
 ├── adult-hosts.txt             # 🌐 hosts 黑名单（自动生成，约 1.29 万条）
 ├── clash-custom-blocklist.yaml # 📋 自定义 Clash 规则集（自动生成）
 ├── custom-blocklist.txt        # ✏️ 自定义名单源文件（手改这里）
