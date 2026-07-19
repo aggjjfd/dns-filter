@@ -6,7 +6,7 @@
 输入：
     custom-blocklist.txt   手工补充的漏网站点，一行一个域名（# 注释）
 产出：
-    adult-hosts.txt              category-porn + 自定义，hosts 格式（127.0.0.1 指向，含 www 变体）
+    adult-hosts.txt              category-porn + 自定义，hosts 格式（127.0.0.1 指向）
     clash-custom-blocklist.yaml  仅自定义名单，mihomo rule-provider（behavior: domain）格式
     adult-shadowrocket.list      category-porn + 自定义，Shadowrocket/Surge 格式（DOMAIN-SUFFIX 每行一条）
 
@@ -49,22 +49,18 @@ def base_domains(lines: list[str]) -> set[str]:
         domains.add(domain)
     return domains
 
-def with_www(domains: set[str]) -> set[str]:
-    # hosts 无通配符，退化为 主域 + www 变体
-    return domains | {"www." + d for d in domains if d.count(".") == 1}
-
 def main() -> None:
     porn = urlopen(SOURCE, timeout=60).read().decode("utf-8").splitlines()
     custom = CUSTOM.read_text(encoding="utf-8").splitlines() if CUSTOM.exists() else []
     porn_base, custom_base = base_domains(porn), base_domains(custom)
 
-    hosts = sorted(with_www(porn_base | custom_base))
+    hosts = sorted(porn_base | custom_base)
     HOSTS_OUT.write_text(
         f"{HOSTS_HEADER}# 共 {len(hosts)} 条\n\n" + "\n".join(f"127.0.0.1 {d}" for d in hosts) + "\n",
         encoding="utf-8",
     )
 
-    clash = sorted(with_www(custom_base))
+    clash = sorted(custom_base)
     CLASH_OUT.write_text(
         f"{CLASH_HEADER}payload:\n" + "".join(f"  - '+.{d}'\n" for d in clash),
         encoding="utf-8",
