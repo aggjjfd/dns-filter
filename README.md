@@ -19,14 +19,14 @@
 
 首次配置约 30 分钟：
 
-1. 💻 **Windows**：Clash Verge 订阅右键 → 编辑扩展配置 → 粘贴 [`filter.stoverride`](filter.stoverride) 内容，保存
+1. 💻 **Windows**：Clash Verge 订阅右键 → 编辑扩展配置 → 粘贴 [`filter.stoverride`](filter.stoverride) 内容，保存（坚持用停更的 Clash for Windows 则改用 [`filter-cfw.yaml`](filter-cfw.yaml)，粘贴进 设置 → Mixin → YAML）
 2. 🤖 **Android**：装 FlClash → 订阅覆写 → 粘贴同上；AdAway（root 模式）远程源填：
    `https://raw.githubusercontent.com/aggjjfd/dns-filter/main/adult-hosts.txt`
 3. 📱 **iPad（Shadowrocket，管挂梯）**：底栏「配置」→「模块」➕ → 粘贴下方模块链接 → 下载；回到配置点「使用配置」；再到 设置 → 自动更新 打开模块更新（间隔 1 天）：
    `https://raw.githubusercontent.com/aggjjfd/dns-filter/main/adult-block.module`
 4. 📱 **iPad（DNS 描述文件，管直连）**：iPad 上 Safari 打开下方链接下载描述文件 → 设置 → 已下载描述文件 → 安装（Safari 若直接显示文本，改用微信/邮件把文件发到 iPad 打开）：
    `https://raw.githubusercontent.com/aggjjfd/dns-filter/main/adguard-family-doh.mobileconfig`
-5. 🧱 **Windows 裸连兜底**：管理员记事本把 `adult-hosts.txt` 追加进 `C:\Windows\System32\drivers\etc\hosts`，然后 `ipconfig /flushdns`
+5. 🧱 **Windows 裸连兜底**：管理员 PowerShell 执行 `tools/install_hosts_windows.ps1`（幂等注入标记块，自动刷新 DNS 缓存）；或手动把 `adult-hosts.txt` 追加进 `C:\Windows\System32\drivers\etc\hosts`
 6. 🔑 GitHub 密码写纸上放公司（防自己冲动拆规则）
 
 ✅ **验证**：挂梯和裸连各访问一个成人站点，都应打不开。
@@ -74,7 +74,8 @@ git push                     # 三端 24h 内自动生效
 ## 📁 仓库结构
 
 ```
-├── filter.stoverride           # 🧩 过滤补丁（Windows/Android 的 Clash 覆写用）
+├── filter.stoverride           # 🧩 过滤补丁（Clash Verge/FlClash 覆写用）
+├── filter-cfw.yaml             # 🧩 过滤补丁（Clash for Windows Mixin 用，text 格式规则集）
 ├── adult-block.module          # 📱 Shadowrocket 模块（iPad 挂梯层）
 ├── adult-shadowrocket.list     # 📋 Shadowrocket 规则集（自动生成，6515 条）
 ├── adguard-family-doh.mobileconfig # 📱 iOS DNS 描述文件（iPad 直连层）
@@ -82,6 +83,7 @@ git push                     # 三端 24h 内自动生效
 ├── clash-custom-blocklist.yaml # 📋 自定义 Clash 规则集（自动生成）
 ├── custom-blocklist.txt        # ✏️ 自定义名单源文件（手改这里）
 └── tools/make_hosts.py         # 🔧 名单生成脚本
+    tools/install_hosts_windows.ps1 # 🧱 Windows hosts 注入脚本（管理员运行）
 ```
 
 ## 🔧 维护

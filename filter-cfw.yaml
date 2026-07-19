@@ -1,0 +1,26 @@
+# 过滤补丁（Clash for Windows 专用，Mixin YAML 版）
+# 用法：CFW → Settings → Profiles 下方「Mixin」→ YAML，粘贴本文件全部内容
+# 注意：CFW 的 Premium 内核不支持 mrs 二进制格式，本文件使用 text 版规则集
+
+prepend-rules:
+  - RULE-SET,custom,REJECT
+  - RULE-SET,porn,REJECT
+
+rule-providers:
+  porn:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-porn.yaml"
+    path: ./ruleset/category-porn.yaml
+    interval: 86400
+  custom:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/aggjjfd/dns-filter/main/clash-custom-blocklist.yaml"
+    path: ./ruleset/custom-blocklist.yaml
+    interval: 86400
+
+dns:
+  enable: true
+  nameserver:
+    - "https://doh.cleanbrowsing.org/doh/family-filter/"
