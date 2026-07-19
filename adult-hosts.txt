@@ -1,7 +1,7 @@
 # 成人内容 hosts 黑名单
 # 由 tools/make_hosts.py 自动生成，源：v2fly category-porn（MetaCubeX 转换）+ custom-blocklist.txt
 # 用法：Windows 并入 C:\Windows\System32\drivers\etc\hosts；Android 用 AdAway（root 模式）添加为远程源
-# 共 12904 条
+# 共 12935 条
 
 0.0.0.0 02weqj32.com
 0.0.0.0 04647.club
@@ -254,6 +254,7 @@
 0.0.0.0 748av.com
 0.0.0.0 75m.co
 0.0.0.0 7719.me
+0.0.0.0 7777sq.com
 0.0.0.0 777xporn.com
 0.0.0.0 77maott.com
 0.0.0.0 7mm.tv
@@ -935,6 +936,7 @@
 0.0.0.0 bhggn.xyz
 0.0.0.0 bhzyk.buzz
 0.0.0.0 bhzyw2.top
+0.0.0.0 bi-ka.mom
 0.0.0.0 biaoqs.xyz
 0.0.0.0 biaoqs1.xyz
 0.0.0.0 biaoqs2.xyz
@@ -974,6 +976,7 @@
 0.0.0.0 bikaa.xyz
 0.0.0.0 bikac.xyz
 0.0.0.0 bikaios.xyz
+0.0.0.0 bikamanhua.com.cn
 0.0.0.0 bili2.cc
 0.0.0.0 bili888.com
 0.0.0.0 bili999.com
@@ -1611,6 +1614,7 @@
 0.0.0.0 edgemeplease.com
 0.0.0.0 efukt.com
 0.0.0.0 egotastic.com
+0.0.0.0 ehentai.com
 0.0.0.0 ehgt.org
 0.0.0.0 ehtracker.org
 0.0.0.0 ehv.cc
@@ -1747,6 +1751,7 @@
 0.0.0.0 exeporn.net
 0.0.0.0 exgfvideos.xxx
 0.0.0.0 exgirlfriendmarket.com
+0.0.0.0 exhentai.com
 0.0.0.0 exhentai.org
 0.0.0.0 exiporn.com
 0.0.0.0 exoav.com
@@ -3082,6 +3087,8 @@
 0.0.0.0 jm18c-bbm.cc
 0.0.0.0 jm18c-bbm.net
 0.0.0.0 jm18c-uoi.net
+0.0.0.0 jm222.xyz
+0.0.0.0 jm244.xyz
 0.0.0.0 jm365.work
 0.0.0.0 jm365.xyz
 0.0.0.0 jm98.cc
@@ -3102,6 +3109,7 @@
 0.0.0.0 jmapiproxy3.cc
 0.0.0.0 jmapiproxy4.cc
 0.0.0.0 jmapiproxyxxx.vip
+0.0.0.0 jmcomic-app.shop
 0.0.0.0 jmcomic-fb.vip
 0.0.0.0 jmcomic-zzz.one
 0.0.0.0 jmcomic-zzz.org
@@ -3111,11 +3119,16 @@
 0.0.0.0 jmcomic.mobi
 0.0.0.0 jmcomic.moe
 0.0.0.0 jmcomic.rocks
+0.0.0.0 jmcomic.shop
 0.0.0.0 jmcomic1.city
 0.0.0.0 jmcomic1.me
 0.0.0.0 jmcomic1.mobi
 0.0.0.0 jmcomic1.rocks
 0.0.0.0 jmcomic2.moe
+0.0.0.0 jmcomic3.app
+0.0.0.0 jmcomic3.shop
+0.0.0.0 jmcomicapp.xyz
+0.0.0.0 jmtt.shop
 0.0.0.0 jmvbt.com
 0.0.0.0 joanabliss.com
 0.0.0.0 jodic-forum.org
@@ -3498,6 +3511,7 @@
 0.0.0.0 mangoporn.net
 0.0.0.0 mangotporn.com
 0.0.0.0 manhuabika.com
+0.0.0.0 manhuapica.com
 0.0.0.0 manhub.com
 0.0.0.0 manhunt.net
 0.0.0.0 manhuntdaily.com
@@ -3999,6 +4013,7 @@
 0.0.0.0 nuuporn.com
 0.0.0.0 nuvid.com
 0.0.0.0 nwxs8.com
+0.0.0.0 nyahentai.com
 0.0.0.0 nyahentai.re
 0.0.0.0 nym97.net
 0.0.0.0 obutsumania.com
@@ -4603,6 +4618,7 @@
 0.0.0.0 projectjav.com
 0.0.0.0 projectvoyeur.com
 0.0.0.0 pron.guru
+0.0.0.0 pronhub.com
 0.0.0.0 propertysex.com
 0.0.0.0 proporn.com
 0.0.0.0 prostoporno.net
@@ -6195,6 +6211,7 @@
 0.0.0.0 www.748av.com
 0.0.0.0 www.75m.co
 0.0.0.0 www.7719.me
+0.0.0.0 www.7777sq.com
 0.0.0.0 www.777xporn.com
 0.0.0.0 www.77maott.com
 0.0.0.0 www.7mm.tv
@@ -6860,6 +6877,7 @@
 0.0.0.0 www.bhggn.xyz
 0.0.0.0 www.bhzyk.buzz
 0.0.0.0 www.bhzyw2.top
+0.0.0.0 www.bi-ka.mom
 0.0.0.0 www.biaoqs.xyz
 0.0.0.0 www.biaoqs1.xyz
 0.0.0.0 www.biaoqs2.xyz
@@ -7516,6 +7534,7 @@
 0.0.0.0 www.edgemeplease.com
 0.0.0.0 www.efukt.com
 0.0.0.0 www.egotastic.com
+0.0.0.0 www.ehentai.com
 0.0.0.0 www.ehgt.org
 0.0.0.0 www.ehtracker.org
 0.0.0.0 www.ehv.cc
@@ -7645,6 +7664,7 @@
 0.0.0.0 www.exeporn.net
 0.0.0.0 www.exgfvideos.xxx
 0.0.0.0 www.exgirlfriendmarket.com
+0.0.0.0 www.exhentai.com
 0.0.0.0 www.exhentai.org
 0.0.0.0 www.exiporn.com
 0.0.0.0 www.exoav.com
@@ -8960,6 +8980,8 @@
 0.0.0.0 www.jm18c-bbm.cc
 0.0.0.0 www.jm18c-bbm.net
 0.0.0.0 www.jm18c-uoi.net
+0.0.0.0 www.jm222.xyz
+0.0.0.0 www.jm244.xyz
 0.0.0.0 www.jm365.work
 0.0.0.0 www.jm365.xyz
 0.0.0.0 www.jm98.cc
@@ -8980,6 +9002,7 @@
 0.0.0.0 www.jmapiproxy3.cc
 0.0.0.0 www.jmapiproxy4.cc
 0.0.0.0 www.jmapiproxyxxx.vip
+0.0.0.0 www.jmcomic-app.shop
 0.0.0.0 www.jmcomic-fb.vip
 0.0.0.0 www.jmcomic-zzz.one
 0.0.0.0 www.jmcomic-zzz.org
@@ -8989,11 +9012,16 @@
 0.0.0.0 www.jmcomic.mobi
 0.0.0.0 www.jmcomic.moe
 0.0.0.0 www.jmcomic.rocks
+0.0.0.0 www.jmcomic.shop
 0.0.0.0 www.jmcomic1.city
 0.0.0.0 www.jmcomic1.me
 0.0.0.0 www.jmcomic1.mobi
 0.0.0.0 www.jmcomic1.rocks
 0.0.0.0 www.jmcomic2.moe
+0.0.0.0 www.jmcomic3.app
+0.0.0.0 www.jmcomic3.shop
+0.0.0.0 www.jmcomicapp.xyz
+0.0.0.0 www.jmtt.shop
 0.0.0.0 www.jmvbt.com
 0.0.0.0 www.joanabliss.com
 0.0.0.0 www.jodic-forum.org
@@ -9370,6 +9398,7 @@
 0.0.0.0 www.mangoporn.net
 0.0.0.0 www.mangotporn.com
 0.0.0.0 www.manhuabika.com
+0.0.0.0 www.manhuapica.com
 0.0.0.0 www.manhub.com
 0.0.0.0 www.manhunt.net
 0.0.0.0 www.manhuntdaily.com
@@ -9860,6 +9889,7 @@
 0.0.0.0 www.nuuporn.com
 0.0.0.0 www.nuvid.com
 0.0.0.0 www.nwxs8.com
+0.0.0.0 www.nyahentai.com
 0.0.0.0 www.nyahentai.re
 0.0.0.0 www.nym97.net
 0.0.0.0 www.obutsumania.com
@@ -10452,6 +10482,7 @@
 0.0.0.0 www.projectjav.com
 0.0.0.0 www.projectvoyeur.com
 0.0.0.0 www.pron.guru
+0.0.0.0 www.pronhub.com
 0.0.0.0 www.propertysex.com
 0.0.0.0 www.proporn.com
 0.0.0.0 www.prostoporno.net

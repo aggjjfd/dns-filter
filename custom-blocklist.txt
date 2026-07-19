@@ -1,2 +1,30 @@
 # 自定义屏蔽名单：规则集漏掉的站点写在这里，一行一个域名（# 开头为注释）
-# 修改后重跑 uv run dns/tools/make_hosts.py 即并入 dns/adult-hosts.txt
+# 修改后重跑 uv run tools/make_hosts.py 即生成 hosts / Clash 规则集 / Shadowrocket 列表
+
+# --- 用户指定的成人站点 ---
+pronhub.com
+nyahentai.com
+nhentai.com
+ehentai.com
+exhentai.com
+xvideo.com
+7777sq.com
+
+# --- Pika 漫画 ---
+manhuapica.com
+bikamanhua.com.cn
+bi-ka.mom
+picacgp.com
+picacomic.com
+www.picacomic.com
+
+# --- 禁漫天堂 JMComic ---
+18mh.net
+jmcomic-app.shop
+jmtt.shop
+jm222.xyz
+jm244.xyz
+jmcomicapp.xyz
+jmcomic3.app
+jmcomic.shop
+jmcomic3.shop

@@ -1,6 +1,6 @@
 # 成人域名拦截规则集（Shadowrocket/Surge 格式，RULE-SET 远程引用）
 # 由 tools/make_hosts.py 自动生成，源：v2fly category-porn（MetaCubeX 转换）+ custom-blocklist.txt
-# 共 6515 条
+# 共 6532 条
 DOMAIN-SUFFIX,02weqj32.com
 DOMAIN-SUFFIX,04647.club
 DOMAIN-SUFFIX,0cgdklr5sfwj.com
@@ -252,6 +252,7 @@ DOMAIN-SUFFIX,721av.com
 DOMAIN-SUFFIX,748av.com
 DOMAIN-SUFFIX,75m.co
 DOMAIN-SUFFIX,7719.me
+DOMAIN-SUFFIX,7777sq.com
 DOMAIN-SUFFIX,777xporn.com
 DOMAIN-SUFFIX,77maott.com
 DOMAIN-SUFFIX,7mm.tv
@@ -933,6 +934,7 @@ DOMAIN-SUFFIX,bgicdn.com
 DOMAIN-SUFFIX,bhggn.xyz
 DOMAIN-SUFFIX,bhzyk.buzz
 DOMAIN-SUFFIX,bhzyw2.top
+DOMAIN-SUFFIX,bi-ka.mom
 DOMAIN-SUFFIX,biaoqs.xyz
 DOMAIN-SUFFIX,biaoqs1.xyz
 DOMAIN-SUFFIX,biaoqs2.xyz
@@ -972,6 +974,7 @@ DOMAIN-SUFFIX,bijukujo.club
 DOMAIN-SUFFIX,bikaa.xyz
 DOMAIN-SUFFIX,bikac.xyz
 DOMAIN-SUFFIX,bikaios.xyz
+DOMAIN-SUFFIX,bikamanhua.com.cn
 DOMAIN-SUFFIX,bili2.cc
 DOMAIN-SUFFIX,bili888.com
 DOMAIN-SUFFIX,bili999.com
@@ -1609,6 +1612,7 @@ DOMAIN-SUFFIX,edengay.net
 DOMAIN-SUFFIX,edgemeplease.com
 DOMAIN-SUFFIX,efukt.com
 DOMAIN-SUFFIX,egotastic.com
+DOMAIN-SUFFIX,ehentai.com
 DOMAIN-SUFFIX,ehgt.org
 DOMAIN-SUFFIX,ehtracker.org
 DOMAIN-SUFFIX,ehv.cc
@@ -1745,6 +1749,7 @@ DOMAIN-SUFFIX,evilx.su
 DOMAIN-SUFFIX,exeporn.net
 DOMAIN-SUFFIX,exgfvideos.xxx
 DOMAIN-SUFFIX,exgirlfriendmarket.com
+DOMAIN-SUFFIX,exhentai.com
 DOMAIN-SUFFIX,exhentai.org
 DOMAIN-SUFFIX,exiporn.com
 DOMAIN-SUFFIX,exoav.com
@@ -3080,6 +3085,8 @@ DOMAIN-SUFFIX,jm-comic2.cc
 DOMAIN-SUFFIX,jm18c-bbm.cc
 DOMAIN-SUFFIX,jm18c-bbm.net
 DOMAIN-SUFFIX,jm18c-uoi.net
+DOMAIN-SUFFIX,jm222.xyz
+DOMAIN-SUFFIX,jm244.xyz
 DOMAIN-SUFFIX,jm365.work
 DOMAIN-SUFFIX,jm365.xyz
 DOMAIN-SUFFIX,jm98.cc
@@ -3100,6 +3107,7 @@ DOMAIN-SUFFIX,jmapiproxy2.cc
 DOMAIN-SUFFIX,jmapiproxy3.cc
 DOMAIN-SUFFIX,jmapiproxy4.cc
 DOMAIN-SUFFIX,jmapiproxyxxx.vip
+DOMAIN-SUFFIX,jmcomic-app.shop
 DOMAIN-SUFFIX,jmcomic-fb.vip
 DOMAIN-SUFFIX,jmcomic-zzz.one
 DOMAIN-SUFFIX,jmcomic-zzz.org
@@ -3109,11 +3117,16 @@ DOMAIN-SUFFIX,jmcomic.me
 DOMAIN-SUFFIX,jmcomic.mobi
 DOMAIN-SUFFIX,jmcomic.moe
 DOMAIN-SUFFIX,jmcomic.rocks
+DOMAIN-SUFFIX,jmcomic.shop
 DOMAIN-SUFFIX,jmcomic1.city
 DOMAIN-SUFFIX,jmcomic1.me
 DOMAIN-SUFFIX,jmcomic1.mobi
 DOMAIN-SUFFIX,jmcomic1.rocks
 DOMAIN-SUFFIX,jmcomic2.moe
+DOMAIN-SUFFIX,jmcomic3.app
+DOMAIN-SUFFIX,jmcomic3.shop
+DOMAIN-SUFFIX,jmcomicapp.xyz
+DOMAIN-SUFFIX,jmtt.shop
 DOMAIN-SUFFIX,jmvbt.com
 DOMAIN-SUFFIX,joanabliss.com
 DOMAIN-SUFFIX,jodic-forum.org
@@ -3496,6 +3509,7 @@ DOMAIN-SUFFIX,mangahome.com
 DOMAIN-SUFFIX,mangoporn.net
 DOMAIN-SUFFIX,mangotporn.com
 DOMAIN-SUFFIX,manhuabika.com
+DOMAIN-SUFFIX,manhuapica.com
 DOMAIN-SUFFIX,manhub.com
 DOMAIN-SUFFIX,manhunt.net
 DOMAIN-SUFFIX,manhuntdaily.com
@@ -3997,6 +4011,7 @@ DOMAIN-SUFFIX,nutaku.net
 DOMAIN-SUFFIX,nuuporn.com
 DOMAIN-SUFFIX,nuvid.com
 DOMAIN-SUFFIX,nwxs8.com
+DOMAIN-SUFFIX,nyahentai.com
 DOMAIN-SUFFIX,nyahentai.re
 DOMAIN-SUFFIX,nym97.net
 DOMAIN-SUFFIX,obutsumania.com
@@ -4601,6 +4616,7 @@ DOMAIN-SUFFIX,project-poi.com
 DOMAIN-SUFFIX,projectjav.com
 DOMAIN-SUFFIX,projectvoyeur.com
 DOMAIN-SUFFIX,pron.guru
+DOMAIN-SUFFIX,pronhub.com
 DOMAIN-SUFFIX,propertysex.com
 DOMAIN-SUFFIX,proporn.com
 DOMAIN-SUFFIX,prostoporno.net
@@ -5944,6 +5960,7 @@ DOMAIN-SUFFIX,wuso.me
 DOMAIN-SUFFIX,wuyefuli.org
 DOMAIN-SUFFIX,wvm0agb4.me
 DOMAIN-SUFFIX,ww9094.com
+DOMAIN-SUFFIX,www.picacomic.com
 DOMAIN-SUFFIX,wwwpornhub.pro
 DOMAIN-SUFFIX,wxoyt.com
 DOMAIN-SUFFIX,wyqqdz.com
