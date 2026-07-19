@@ -6,7 +6,7 @@
 输入：
     custom-blocklist.txt   手工补充的漏网站点，一行一个域名（# 注释）
 产出：
-    adult-hosts.txt              category-porn + 自定义，hosts 格式（0.0.0.0 指向，含 www 变体）
+    adult-hosts.txt              category-porn + 自定义，hosts 格式（127.0.0.1 指向，含 www 变体）
     clash-custom-blocklist.yaml  仅自定义名单，mihomo rule-provider（behavior: domain）格式
     adult-shadowrocket.list      category-porn + 自定义，Shadowrocket/Surge 格式（DOMAIN-SUFFIX 每行一条）
 
@@ -60,7 +60,7 @@ def main() -> None:
 
     hosts = sorted(with_www(porn_base | custom_base))
     HOSTS_OUT.write_text(
-        f"{HOSTS_HEADER}# 共 {len(hosts)} 条\n\n" + "\n".join(f"0.0.0.0 {d}" for d in hosts) + "\n",
+        f"{HOSTS_HEADER}# 共 {len(hosts)} 条\n\n" + "\n".join(f"127.0.0.1 {d}" for d in hosts) + "\n",
         encoding="utf-8",
     )
 

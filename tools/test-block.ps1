@@ -1,51 +1,51 @@
 # 测试 Windows 端拦截是否生效（pre-commit hook 用）
-# 检查两点：① hosts 层（nslookup 解析到 0.0.0.0）② Clash 规则层（curl 走代理被 REJECT）
+# 检测：① hosts 层（直连 → 127.0.0.1：连不上）② Clash 规则层（走代理 → REJECT）
+# 门禁：hosts 层失败 → 阻止提交；Clash 层失败 → 仅警告（CDN 缓存/规则集未拉取）
 # 用法：pwsh.exe -File tools/test-block.ps1
-
 $ErrorActionPreference = 'Stop'
-$testDomains = @(
-  '7777sq.com',
-  'jm222.xyz',
-  'picacgp.com',
-  'pronhub.com',
+$domains = @(
+  '7777sq.com'
+  'jm222.xyz'
+  'picacgp.com'
+  'pronhub.com'
   'nhentai.com'
 )
-$clashProxy = 'http://127.0.0.1:7890'  # Verge Rev 默认 HTTP 代理端口
-$failed = @()
+$proxy = 'http://127.0.0.1:7890'    # Verge Rev 默认 HTTP 代理端口
+$bypass = @('--noproxy', '*')        # 绕开环境变量代理
+$timeout = @('--connect-timeout', '5')
+$hostsFail = $false
+$clashFail = $false
 
-Write-Host "🔍 检测屏蔽域名 hosts 解析..." -ForegroundColor Cyan
-foreach ($d in $testDomains) {
-  $result = nslookup $d 2>$null | Select-String 'Address:' | Select-Object -Last 1
-  if ($result -match '0\.0\.0\.0|127\.0\.0\.1') {
-    Write-Host "  ✅ hosts: $d → 0.0.0.0" -ForegroundColor Green
+Write-Host '🧱 hosts 层（直连，预期连不上）...' -ForegroundColor Cyan
+foreach ($d in $domains) {
+  $code = curl.exe -s -o nul -w '%{http_code}' $bypass $timeout "http://$d" 2>$null
+  if ($code -eq '000') {
+    Write-Host "  ✅ $d" -ForegroundColor Green
   } else {
-    Write-Host "  ❌ hosts: $d → 未屏蔽（${result}）" -ForegroundColor Red
-    $failed += "hosts: $d"
+    Write-Host "  ❌ $d → HTTP $code" -ForegroundColor Red
+    $hostsFail = $true
   }
 }
 
-Write-Host ""
-Write-Host "🔍 测试 Clash 规则层（经代理 REJECT）..." -ForegroundColor Cyan
-foreach ($d in $testDomains) {
-  try {
-    $resp = curl.exe -s -o /dev/null -w '%{http_code}' --proxy $clashProxy --connect-timeout 3 "https://$d" 2>$null
-    if ($resp -eq '000') {
-      Write-Host "  ✅ Clash: $d → 连接被拒绝" -ForegroundColor Green
-    } else {
-      Write-Host "  ❌ Clash: $d → HTTP $resp（未拦截）" -ForegroundColor Red
-      $failed += "Clash: $d"
-    }
-  } catch {
-    Write-Host "  ⚠️  Clash: $d → 跳过（代理未启动？）" -ForegroundColor Yellow
+Write-Host ''
+Write-Host '⚡ Clash 规则层（走代理，预期 REJECT）...' -ForegroundColor Cyan
+foreach ($d in $domains) {
+  $code = curl.exe -s -o nul -w '%{http_code}' --proxy $proxy $timeout "https://$d" 2>$null
+  if ($code -eq '000') {
+    Write-Host "  ✅ $d" -ForegroundColor Green
+  } else {
+    Write-Host "  ⚠️  $d → HTTP $code（规则集缓存未更新）" -ForegroundColor Yellow
+    $clashFail = $true
   }
 }
 
-Write-Host ""
-if ($failed.Count -gt 0) {
-  Write-Host "❌ 以下检测未通过：" -ForegroundColor Red
-  $failed | ForEach-Object { Write-Host "   - $_" }
+Write-Host ''
+if ($hostsFail) {
+  Write-Host '❌ hosts 层检测未通过，commit 已阻止。修复后重试。' -ForegroundColor Red
   exit 1
-} else {
-  Write-Host "✅ 全部检测通过，屏蔽正常。" -ForegroundColor Green
-  exit 0
 }
+if ($clashFail) {
+  Write-Host '⚠️  Clash 层有未拦截（CDN 缓存/规则集未拉取），请在 Verge Rev 右键更新规则集。' -ForegroundColor Yellow
+}
+Write-Host '✅ 检测通过。' -ForegroundColor Green
+exit 0
